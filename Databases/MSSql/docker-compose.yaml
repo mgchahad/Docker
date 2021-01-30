@@ -1,0 +1,16 @@
+version: '3'
+services:
+  sql_server:
+    container_name: sqlserver
+    image: justin2004/mssql_server_tiny
+    restart: always
+    ports:
+      - "1433:1433"
+      - "1434:1434"
+    environment:
+      - SA_PASSWORD=<PASSWORD>
+      - ACCEPT_EULA=Y
+    volumes:
+      - /mnt/app/sql_server/:/var/opt/mssql
+      - /mnt/certs_mssql/private/:/etc/ssl/private
+      - /mnt/certs_mssql/certs/:/etc/ssl/certs

@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: always
+    command: -c ssl=on -c ssl_cert_file=/var/lib/postgresql/postgresql.crt -c ssl_key_file=/var/lib/postgresql/postgresql.key -c ssl_ca_file=/var/lib/postgresql/root.crt -c hba_file=/var/lib/postgresql/pg_hba.conf
+    ports:
+      - "5432:5432"
+    volumes:
+      - /mnt/app/postgresql/:/var/lib/postgresql/data
+      - /mnt/certs/:/var/lib/postgresql
+    environment:
+      - POSTGRES_USER=<USER>
+      - POSTGRES_PASSWORD=<PASSWORD>
+      - POSTGRES_DB=<DB_NAME>
