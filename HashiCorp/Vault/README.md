@@ -19,7 +19,7 @@ openssl genrsa -out certificado.key 4096
 ```
 openssl req -new -key certificado.key -out certificado.csr
 ```
-* Gerando certificado auto-assinado:
+* Gerando certificado auto-assinado CRT:
 ```
 openssl x509 -req -days 365 -in certificado.csr -signkey certificado.key -out certificado.crt
 ```
