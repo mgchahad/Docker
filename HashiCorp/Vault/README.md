@@ -1,3 +1,4 @@
+![Vault](https://www.drupal.org/files/project-images/Vault_VerticalLogo_FullColor.png)
 # Procedimento de configuração do Vault em modo HA
 ## Requisitos
 Serão necessárias as soluções abaixo para a configuração do Vault:
