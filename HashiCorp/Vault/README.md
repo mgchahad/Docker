@@ -71,7 +71,7 @@ Crie um diretório chamado "config" na raiz do projeto, acesse o diretório e ad
 *Obs.: Aplique os ajustes necessários com base no nome de domínio que foi configurado durante a emissão do certificado e altere o endereço IP do storage para o de seu computador.*
 
 ### Iniciando Cluster Vault
-Para iniciar os containers de Vault + Mysql, utilize o comando abaixo:
+Antes de iniciar o serviço do Vault aplique os ajustes necessários no arquivo "docker-compose.yaml". Para iniciar os containers de Vault + Mysql, utilize o comando abaixo:
 ```
 docker-compose up -d
 ```
